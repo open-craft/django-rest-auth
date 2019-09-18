@@ -18,6 +18,8 @@ Django-rest-auth provides a set of REST API endpoints for Authentication and Reg
 
 Documentation
 -------------
+
+This version does support SimpleJWT Login, but rest of the methods are untouched.
 http://django-rest-auth.readthedocs.org/en/latest/
 
 
@@ -29,3 +31,10 @@ https://github.com/Tivix/django-rest-auth
 Stack Overflow
 -----------
 http://stackoverflow.com/questions/tagged/django-rest-auth
+
+
+Installation for this Repo:
+
+```shell
+pip install git+https://github.com/ankurpandeyvns/django-rest-auth
+```
