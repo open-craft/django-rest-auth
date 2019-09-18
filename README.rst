@@ -33,8 +33,8 @@ Stack Overflow
 http://stackoverflow.com/questions/tagged/django-rest-auth
 
 
-Installation for this Repo:
+#### Installation for this Repo:
 
-``
+```shell
 pip install git+https://github.com/ankurpandeyvns/django-rest-auth
-``
+```
