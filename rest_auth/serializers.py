@@ -137,7 +137,8 @@ class JWTSerializer(serializers.Serializer):
     """
     Serializer for JWT authentication.
     """
-    token = serializers.CharField()
+    access_token = serializers.CharField()
+    refresh_token = serializers.CharField()
     user = serializers.SerializerMethodField()
 
     def get_user(self, obj):

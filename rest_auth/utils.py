@@ -1,5 +1,7 @@
 from six import string_types
 from importlib import import_module
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 
 def import_callable(path_or_callable):
@@ -17,13 +19,5 @@ def default_create_token(token_model, user, serializer):
 
 
 def jwt_encode(user):
-    try:
-        from rest_framework_jwt.settings import api_settings
-    except ImportError:
-        raise ImportError("djangorestframework_jwt needs to be installed")
-
-    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-    jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-
-    payload = jwt_payload_handler(user)
-    return jwt_encode_handler(payload)
+    refresh = TokenObtainPairSerializer.get_token(user)
+    return refresh.access_token, refresh
