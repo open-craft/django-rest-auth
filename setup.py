@@ -33,6 +33,7 @@ setup(
         'responses>=0.5.0',
         'django-allauth>=0.25.0',
         'djangorestframework-jwt>=1.9.0',
+        'djangorestframework_simplejwt>=4.3.0',
     ],
     test_suite='runtests.runtests',
     include_package_data=True,
